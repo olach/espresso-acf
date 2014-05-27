@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codesense version="1.0">
+
+	<set name="com.advancedcustomfields.functions">
+		<behavior>
+		    <append-dynamic>
+		        <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+		    	<transform-into>(?1::(\)$0)</transform-into>
+		    </append-dynamic>
+		</behavior>
+		
+		<completion string="get_field">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$field_name}${2:, ${3:[\$post_id]}${4:, ${5:[\$format_value]}}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="the_field">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$field_name}${2:, ${3:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="get_field_object">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$field_key}${2:, ${3:[\$post_id]}${4:, ${5:[\$options]}}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="get_sub_field">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$sub_field_name}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="has_sub_field">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$field_name}${2:, ${3:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="update_field">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$field_key}, ${3:\$value}${4:, ${5:\$post_id}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="get_fields">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:[\$post_id]}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="the_sub_field">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$sub_field_name}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+
+		<completion string="get_field_objects">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:[\$post_id]}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="acf_add_options_sub_page">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$page}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="get_row_layout"/>
+		
+		<completion string="get_sub_field_object">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$field_key}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="have_rows">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$field_name}${2:, ${3:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="acf_set_options_page_menu">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$menu_name}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="acf_set_options_page_title">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$title}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="acf_set_options_page_capability">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$capability}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="acf_form">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:[\$options]}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+	</set>
+
+</codesense>
