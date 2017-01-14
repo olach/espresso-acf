@@ -4,7 +4,7 @@ This is a plugin for MacRabbit's [Espresso](http://macrabbit.com/espresso/) code
 ## Features
 This Espresso plugin adds autocompletion and parameter hinting for the function API in Advanced Custom Fields v4. When ACF v5 (currently in beta) is ready for prime time, this plugin will be updated to support all new functions added.
 
-![Demo](Demo/acf.gif)
+![Demo](demo.gif)
 
 ## Usage
 Start type the name of the desired function and press `tab` or `enter` to autocomplete the function.
@@ -14,5 +14,4 @@ Use `tab` and `shift tab` to select the parameters. Optional parameters are wrap
 ## Installation
 
 1. Download and extract the zip
-2. Rename folder to ACF.sugar
-3. Double click the ACF.sugar file to install it
+2. Double click the ACF.sugar file to install it
