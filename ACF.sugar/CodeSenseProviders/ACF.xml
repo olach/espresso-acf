@@ -7,4 +7,10 @@
 		<complete-match>(?&lt;!->|\$|&lt;\?)\b[a-zA-Z0-9_]+</complete-match>
 	</provider>
 
+	<provider>
+		<selector>language-root.php (string, string *)</selector>
+		<completions>com.advancedcustomfields.actions</completions>
+		<complete-match capture="2">\badd_action\(\s*('|")([a-zA-Z/-_]+)</complete-match>
+	</provider>
+
 </codesense>

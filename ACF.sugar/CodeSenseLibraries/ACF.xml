@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codesense version="1.0">
 
+	<set name="com.advancedcustomfields.actions">
+		<completion string="acf/save_post"/>
+		<completion string="acf/input/admin_head"/>
+		<completion string="acf/field_group/admin_head"/>
+		<completion string="acf/input/admin_enqueue_scripts"/>
+		<completion string="acf/field_group/admin_enqueue_scripts"/>
+		<completion string="acf/render_field"/>
+		<completion string="acf/input/form_data"/>
+	</set>
+	
 	<set name="com.advancedcustomfields.functions">
 		<behavior>
 		    <append-dynamic>
