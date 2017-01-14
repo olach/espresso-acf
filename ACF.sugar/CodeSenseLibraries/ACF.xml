@@ -160,8 +160,6 @@
 			</behavior>
 		</completion>
 		
-		<completion string="the_row"/>
-		
 		<completion string="acf_set_options_page_menu">
 			<behavior>
 				<append-dynamic>
@@ -194,6 +192,15 @@
 				<append-dynamic>
 				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
 					<transform-into>(?1::(${1:[\$options]}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="update_sub_field">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$selector}, ${2:\$value}${3:, ${4:[\$post_id]}}\)$0)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
