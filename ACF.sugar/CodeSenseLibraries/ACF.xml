@@ -11,6 +11,37 @@
 		<completion string="acf/input/form_data"/>
 	</set>
 	
+	<set name="com.advancedcustomfields.filters">
+		<completion string="acf/options_page/settings"/>
+		<completion string="acf/load_field"/>
+		<completion string="acf/load_value"/>
+		<completion string="acf/update_value"/>
+		<completion string="acf/fields/post_object/query"/>
+		<completion string="acf/fields/relationship/query"/>
+		<completion string="acf/pre_save_post"/>
+		<completion string="acf/fields/relationship/result"/>
+		<completion string="acf/fields/post_object/result"/>
+		<completion string="acf/fields/post_object/result/name">
+			<behavior>
+				<!--<append-dynamic>
+				    <matched-suffix>(=)|[^=]</matched-suffix>
+					<transform-into>(?1::=)${1:\$field_name}$0</transform-into>
+				</append-dynamic>-->
+				<append-static>=${1:\$field_name}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/validate_value"/>
+		<completion string="acf/fields/post_object/result/key">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(=)|[^=]</matched-suffix>
+					<transform-into>(?1::=${1:\$field_key})$0</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		<completion string="acf/validate_value"/>
+	</set>
+	
 	<set name="com.advancedcustomfields.functions">
 		<behavior>
 		    <append-dynamic>

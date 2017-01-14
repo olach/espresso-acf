@@ -13,4 +13,10 @@
 		<complete-match capture="2">\badd_action\(\s*('|")([a-zA-Z/-_]+)</complete-match>
 	</provider>
 
+	<provider>
+		<selector>language-root.php (string, string *)</selector>
+		<completions>com.advancedcustomfields.filters</completions>
+		<complete-match capture="2">\badd_filter\(\s*('|")([a-zA-Z/-_]+)</complete-match>
+	</provider>
+
 </codesense>
