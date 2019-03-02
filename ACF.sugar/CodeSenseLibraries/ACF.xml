@@ -2,44 +2,242 @@
 <codesense version="1.0">
 
 	<set name="com.advancedcustomfields.actions">
-		<completion string="acf/save_post"/>
-		<completion string="acf/input/admin_head"/>
-		<completion string="acf/field_group/admin_head"/>
-		<completion string="acf/input/admin_enqueue_scripts"/>
 		<completion string="acf/field_group/admin_enqueue_scripts"/>
-		<completion string="acf/render_field"/>
+		<completion string="acf/field_group/admin_head"/>
+		<completion string="acf/init"/>
+		<completion string="acf/input/admin_enqueue_scripts"/>
+		<completion string="acf/input/admin_footer"/>
+		<completion string="acf/input/admin_head"/>
 		<completion string="acf/input/form_data"/>
+		<completion string="acf/render_field"/>
+		<completion string="acf/render_field/type">
+			<behavior>
+				<append-static>=${1:\{\$field_type\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/save_post"/>
+		<completion string="acf/validate_save_post"/>
 	</set>
 	
 	<set name="com.advancedcustomfields.filters">
-		<completion string="acf/options_page/settings"/>
-		<completion string="acf/load_field"/>
-		<completion string="acf/load_value"/>
-		<completion string="acf/update_value"/>
+		<completion string="acf/compatibility">
+			<behavior>
+				<append-static>/${1:\{\$name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/flexible_content/layout_title"/>
+		<completion string="acf/fields/flexible_content/layout_title/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/flexible_content/layout_title/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/google_map/api"/>
 		<completion string="acf/fields/post_object/query"/>
-		<completion string="acf/fields/relationship/query"/>
-		<completion string="acf/pre_save_post"/>
-		<completion string="acf/fields/relationship/result"/>
+		<completion string="acf/fields/post_object/query/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/post_object/query/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
 		<completion string="acf/fields/post_object/result"/>
 		<completion string="acf/fields/post_object/result/name">
 			<behavior>
-				<!--<append-dynamic>
-				    <matched-suffix>(=)|[^=]</matched-suffix>
-					<transform-into>(?1::=)${1:\$field_name}$0</transform-into>
-				</append-dynamic>-->
-				<append-static>=${1:\$field_name}</append-static>
+				<append-static>=${1:\{\$field_name\}}</append-static>
 			</behavior>
 		</completion>
-		<completion string="acf/validate_value"/>
 		<completion string="acf/fields/post_object/result/key">
 			<behavior>
-				<append-dynamic>
-				    <matched-suffix>(=)|[^=]</matched-suffix>
-					<transform-into>(?1::=${1:\$field_key})$0</transform-into>
-				</append-dynamic>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/relationship/query"/>
+		<completion string="acf/fields/relationship/query/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/relationship/query/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/relationship/result"/>
+		<completion string="acf/fields/relationship/result/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/relationship/result/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/taxonomy/query"/>
+		<completion string="acf/fields/taxonomy/query/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/taxonomy/query/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/taxonomy/result"/>
+		<completion string="acf/fields/taxonomy/result/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/taxonomy/result/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/taxonomy/wp_list_categories"/>
+		<completion string="acf/fields/taxonomy/wp_list_categories/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/fields/taxonomy/wp_list_categories/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/format_value"/>
+		<completion string="acf/format_value/type">
+			<behavior>
+				<append-static>=${1:\{\$field_type\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/load_field"/>
+		<completion string="acf/load_field/type">
+			<behavior>
+				<append-static>=${1:\{\$field_type\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/load_field/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/load_field/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/load_value"/>
+		<completion string="acf/load_value/type">
+			<behavior>
+				<append-static>=${1:\{\$field_type\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/load_value/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/load_value/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/pre_save_post"/>
+		<completion string="acf/prepare_field"/>
+		<completion string="acf/prepare_field/type">
+			<behavior>
+				<append-static>=${1:\{\$field_type\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/prepare_field/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/prepare_field/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/settings">
+			<behavior>
+				<append-static>/${1:\{\$name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/update_value"/>
+		<completion string="acf/update_value/type">
+			<behavior>
+				<append-static>=${1:\{\$field_type\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/update_value/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/update_value/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/upload_prefilter"/>
+		<completion string="acf/upload_prefilter/type">
+			<behavior>
+				<append-static>=${1:\{\$field_type\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/upload_prefilter/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/upload_prefilter/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/validate_attachment"/>
+		<completion string="acf/validate_attachment/type">
+			<behavior>
+				<append-static>=${1:\{\$field_type\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/validate_attachment/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/validate_attachment/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
 			</behavior>
 		</completion>
 		<completion string="acf/validate_value"/>
+		<completion string="acf/validate_value/type">
+			<behavior>
+				<append-static>=${1:\{\$field_type\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/validate_value/name">
+			<behavior>
+				<append-static>=${1:\{\$field_name\}}</append-static>
+			</behavior>
+		</completion>
+		<completion string="acf/validate_value/key">
+			<behavior>
+				<append-static>=${1:\{\$field_key\}}</append-static>
+			</behavior>
+		</completion>
 	</set>
 	
 	<set name="com.advancedcustomfields.functions">
@@ -50,20 +248,12 @@
 		    </append-dynamic>
 		</behavior>
 		
+		<!-- Basic -->
 		<completion string="get_field">
 			<behavior>
 				<append-dynamic>
 				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$field_name}${2:, ${3:[\$post_id]}${4:, ${5:[\$format_value]}}}\)$0)</transform-into>
-				</append-dynamic>
-			</behavior>
-		</completion>
-		
-		<completion string="the_field">
-			<behavior>
-				<append-dynamic>
-				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$field_name}${2:, ${3:[\$post_id]}}\)$0)</transform-into>
+					<transform-into>(?1::(${1:\$selector}${2:, ${3:[\$post_id]}${4:, ${5:[\$format_value]}}}\)$0)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
@@ -72,34 +262,7 @@
 			<behavior>
 				<append-dynamic>
 				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$field_key}${2:, ${3:[\$post_id]}${4:, ${5:[\$options]}}}\)$0)</transform-into>
-				</append-dynamic>
-			</behavior>
-		</completion>
-		
-		<completion string="get_sub_field">
-			<behavior>
-				<append-dynamic>
-				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$sub_field_name}\)$0)</transform-into>
-				</append-dynamic>
-			</behavior>
-		</completion>
-		
-		<completion string="has_sub_field">
-			<behavior>
-				<append-dynamic>
-				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$field_name}${2:, ${3:[\$post_id]}}\)$0)</transform-into>
-				</append-dynamic>
-			</behavior>
-		</completion>
-		
-		<completion string="update_field">
-			<behavior>
-				<append-dynamic>
-				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$field_key}, ${3:\$value}${4:, ${5:\$post_id}}\)$0)</transform-into>
+					<transform-into>(?1::(${1:\$selector}${2:, ${3:[\$post_id]}${4:, ${5:[\$format_value]}${6:, ${7:[\$load_value]}}}}\)$0)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
@@ -108,16 +271,16 @@
 			<behavior>
 				<append-dynamic>
 				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:[\$post_id]}\)$0)</transform-into>
+					<transform-into>(?1::(${1:${2:[\$post_id]}${3:, ${4:[\$format_value]}}}\)$0)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
 		
-		<completion string="the_sub_field">
+		<completion string="the_field">
 			<behavior>
 				<append-dynamic>
 				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$sub_field_name}\)$0)</transform-into>
+					<transform-into>(?1::(${1:\$selector}${2:, ${3:[\$post_id]}${4:, ${5:[\$format_value]}}}\)$0)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
@@ -126,31 +289,12 @@
 			<behavior>
 				<append-dynamic>
 				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:[\$post_id]}\)$0)</transform-into>
+					<transform-into>(?1::(${1:${2:[\$post_id]}${3:, ${4:[\$format_value]}${5:, ${6:[\$load_value]}}}}\)$0)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
 		
-		<completion string="acf_add_options_sub_page">
-			<behavior>
-				<append-dynamic>
-				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$page}\)$0)</transform-into>
-				</append-dynamic>
-			</behavior>
-		</completion>
-		
-		<completion string="get_row_layout"/>
-		
-		<completion string="get_sub_field_object">
-			<behavior>
-				<append-dynamic>
-				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$field_key}\)$0)</transform-into>
-				</append-dynamic>
-			</behavior>
-		</completion>
-		
+		<!-- Loop -->
 		<completion string="have_rows">
 			<behavior>
 				<append-dynamic>
@@ -160,38 +304,71 @@
 			</behavior>
 		</completion>
 		
-		<completion string="acf_set_options_page_menu">
+		<completion string="get_sub_field">
 			<behavior>
 				<append-dynamic>
 				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$menu_name}\)$0)</transform-into>
+					<transform-into>(?1::(${1:\$sub_field_name}${2:, ${3:[\$format_value]}}\)$0)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
 		
-		<completion string="acf_set_options_page_title">
+		<completion string="the_sub_field">
 			<behavior>
 				<append-dynamic>
 				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$title}\)$0)</transform-into>
+					<transform-into>(?1::(${1:\$sub_field_name}${2:, ${3:[\$format_value]}}\)$0)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
 		
-		<completion string="acf_set_options_page_capability">
+		<completion string="get_sub_field_object">
 			<behavior>
 				<append-dynamic>
 				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:\$capability}\)$0)</transform-into>
+					<transform-into>(?1::(${1:\$selector}${2:, ${3:[\$format_value]}${4:, ${5:[\$load_value]}}}\)$0)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
 		
-		<completion string="acf_form">
+		<completion string="get_row">
 			<behavior>
 				<append-dynamic>
 				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
-					<transform-into>(?1::(${1:[\$options]}\)$0)</transform-into>
+					<transform-into>(?1::(${1:[\$format_values]}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="get_row_index"/>
+		
+		<completion string="get_row_layout"/>
+		
+		
+		<!-- Update -->
+		<completion string="delete_sub_field">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$selector}${2:, ${3:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="update_field">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$selector}, ${2:\$value}${3:, ${4:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="delete_field">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$selector}${2:, ${3:[\$post_id]}}\)$0)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
@@ -201,6 +378,110 @@
 				<append-dynamic>
 				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
 					<transform-into>(?1::(${1:\$selector}, ${2:\$value}${3:, ${4:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="add_row">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$selector}, ${2:\$value}${3:, ${4:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="update_row">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$selector}, ${2:\$row}, ${3:\$value}${4:, ${5:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="delete_row">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$selector}, ${2:\$row}${3:, ${4:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="add_sub_row">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$selector}, ${2:\$row}${3:, ${4:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="update_sub_row">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$selector}, ${2:\$i}, ${3:\$row}${4:, ${5:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="delete_sub_row">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$selector}, ${2:\$i}${3:, ${4:[\$post_id]}}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		
+		
+		<!-- Other -->
+		<completion string="acf_register_block">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$settings}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="acf_add_options_page">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:[\$args]}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="acf_add_options_sub_page">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:[\$page]}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="acf_form_head"/>
+		
+		<completion string="acf_form">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:[\$settings]}\)$0)</transform-into>
+				</append-dynamic>
+			</behavior>
+		</completion>
+		
+		<completion string="acf_register_form">
+			<behavior>
+				<append-dynamic>
+				    <matched-suffix>(\s*\()|[^\(]</matched-suffix>
+					<transform-into>(?1::(${1:\$settings}\)$0)</transform-into>
 				</append-dynamic>
 			</behavior>
 		</completion>
