@@ -2,7 +2,8 @@
 <action-sort-instructions>
 	<sort-template>
 		<selector>acf.snippets</selector>
-		<selector>acf.snippets.images</selector>
+		<selector>acf.snippets.image</selector>
+		<selector>acf.snippets.relationship</selector>
 		<selector>acf.snippets.repeater</selector>
 	</sort-template>
 </action-sort-instructions>

@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <action-categories>
-	<category id="acf.snippets" show="submenu">
+	<category id="acf.snippets" show="submenu separated">
 		<title>Advanced Custom Fields</title>
 	</category>
-	<category id="acf.snippets.images" show="inline separated"></category>
+	<category id="acf.snippets.image" show="inline separated"></category>
+	<category id="acf.snippets.relationship" show="inline separated"></category>
 	<category id="acf.snippets.repeater" show="inline separated"></category>
 </action-categories>

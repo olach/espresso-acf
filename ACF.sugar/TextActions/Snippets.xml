@@ -1,52 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <action-recipes>
 
-	<snippet id="acf.snippets.images-id" category="tools.Snippets/acf.snippets/acf.snippets.images/0">
-		<title>Images - ID</title>
-		<text><![CDATA[
-<?php \$image = wp_get_attachment_image_src(get_field(${1:\$field_name}), ${2:\$size}); ?>
-<img src="<?php echo \$image[0]; ?>" alt="<?php echo get_the_title(get_field($1)); ?>">
-$0]]></text>
-		<language-context>html.with-php, php</language-context>
-		<text-trigger>acfimageid</text-trigger>
+	<snippet id="acf.snippets.image-id" category="tools.Snippets/acf.snippets/acf.snippets.image/0">
+		<title>Image (ID)</title>
+		<text><![CDATA[<?php
+if (\$image = get_field('${1:field_name}')):
+	echo wp_get_attachment_image(\$image, ${2:\$size});
+endif;
+?>$0]]></text>
+		<language-context>html.with-php</language-context>
+	</snippet>
+
+	<snippet id="acf.snippets.image-url" category="tools.Snippets/acf.snippets/acf.snippets.image/1">
+		<title>Image (URL)</title>
+		<text><![CDATA[<?php if (get_field('${1:field_name}')): ?>
+	<img src="<?= get_field('${1:field_name}') ?>" alt="${2}" />
+<?php endif ?>$0]]></text>
+		<language-context>html.with-php</language-context>
 	</snippet>
 	
-	<snippet id="acf.snippets.images-url" category="tools.Snippets/acf.snippets/acf.snippets.images/1">
-		<title>Images - URL</title>
-		<text><![CDATA[
-<img src="<?php the_field(${1:\$field_name}); ?>" alt="$2">
-$0]]></text>
-		<language-context>html.with-php, php</language-context>
-		<text-trigger>acfimageurl</text-trigger>
-	</snippet>
-	
-	<snippet id="acf.snippets.images-object" category="tools.Snippets/acf.snippets/acf.snippets.images/2">
-			<title>Images - Object</title>
-			<text><![CDATA[
-<?php \$image = get_field(${1:\$field_name}); ?>
-<?php if (!empty(\$image)): ?>
-	<img src="<?php echo \$image['url']; ?>" alt="<?php echo \$image['alt']; ?>">
-<?php endif; ?>
-$0]]></text>
-			<language-context>html.with-php, php</language-context>
-			<text-trigger>acfimageobject</text-trigger>
+	<snippet id="acf.snippets.image-object" category="tools.Snippets/acf.snippets/acf.snippets.image/2">
+			<title>Image (Object)</title>
+			<text><![CDATA[<?php if (!empty(\$image = get_field('${1:field_name}'))): ?>
+	<img src="<?= \$image['url'] ?>" alt="<?= \$image['alt'] ?>" />
+<?php endif ?>$0]]></text>
+			<language-context>html.with-php</language-context>
 		</snippet>
 	
 	<snippet id="acf.snippets.repeater" category="tools.Snippets/acf.snippets/acf.snippets.repeater/0">
 		<title>Repeater</title>
-		<text><![CDATA[
-<?php if (have_rows(${1:\$repeater_field_name})): ?>
-<${3:ul}>
-<?php while (have_rows($1)): the_row(); ?>
-	<${4:li}>
-		<?php the_sub_field(${2:\$sub_field_name}); ?>
-	</${4/\s.*//}>
-<?php endwhile; ?>
-</${3/\s.*//}>
-<?php endif; ?>
-$0]]></text>
-		<language-context>html.with-php, php</language-context>
-		<text-trigger>acfrepeater</text-trigger>
+		<text><![CDATA[<?php if (have_rows('${1:repeater_field_name}')): ?>
+<ul>
+<?php while (have_rows('$1')): the_row() ?>
+	<li>
+		<?= get_sub_field('${2:sub_field_name}') ?>
+	<li>
+<?php endwhile ?>
+</ul>
+<?php endif ?>$0]]></text>
+		<language-context>html.with-php</language-context>
 	</snippet>
+	
+	<snippet id="acf.snippets.relationship" category="tools.Snippets/acf.snippets/acf.snippets.relationship/0">
+			<title>Relationship</title>
+			<text><![CDATA[<?php if (\$posts = get_field('${1:relationship_field_name}')): ?>
+<ul>
+<?php foreach (\$posts as \$p): ?>
+	<li>
+		<a href="<?= get_permalink(\$p->ID); ?>"><?= get_the_title(\$p->ID) ?></a>
+	</li>
+<?php endforeach ?>
+</ul>
+<?php endif ?>$0]]></text>
+			<language-context>html.with-php</language-context>
+		</snippet>
 
 </action-recipes>
