@@ -1,8 +1,8 @@
 # Advanced Custom Fields plugin for Espresso
-This is a plugin for MacRabbit's [Espresso](http://macrabbit.com/espresso/) code editor with support for the excellent [Wordpress](http://wordpress.org/) plugin [Advanced Custom Fields](http://www.advancedcustomfields.com/).
+This is a plugin for the [Espresso](https://espressoapp.com) code editor with support for the excellent [Wordpress](https://wordpress.org) plugin [Advanced Custom Fields](https://www.advancedcustomfields.com).
 
 ## Features
-This Espresso plugin adds autocompletion and parameter hinting for the function API in Advanced Custom Fields v4. When ACF v5 (currently in beta) is ready for prime time, this plugin will be updated to support all new functions added.
+This Espresso plugin adds autocompletion and parameter hinting for functions, actions and filters in Advanced Custom Fields v5.
 
 ![Demo](demo.gif)
 
